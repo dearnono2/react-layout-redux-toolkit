@@ -1,4 +1,4 @@
-import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 // fetch함수 정의
@@ -7,8 +7,8 @@ export const fetchYoutube = createAsyncThunk(
   'youtube/requestYoutube',
   // 비동기 데이터 호출하는 함수 
   async () => {
-    const key = 'AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM';
-    const playlist = "PLtt429gshWMp4G-VhNTFhBzBTd7GOEz-G";
+    const key = 'AIzaSyCtN1lqIIdi7ibHkYVCtVtP9vA4oz8j8n8';
+    const playlist = "PLlXUbM-Wv86W_pA2wzZgQ7pF1VeHP6At4";
     const num = 6;
     const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
     const response = await axios.get(url);
